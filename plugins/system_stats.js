@@ -16,14 +16,14 @@ const dil = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
-Asena.addCommand({pattern: 'rose', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'rse', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
 
     
     if (Config.ALIVEMSG == 'default') {
 
         await message.client.sendMessage(
             message.jid, 
-            fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/bride-dribbble-small.gif"),
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/bride-dribbble-small.mp4"),
             MessageType.video, 
             { mimetype: Mimetype.gif, caption: "```WhatsAsena Founder Roseleyn İçin Çalışıyor!```\n\n*Version:* ```0.25.2 - Dev```\n*Grade:* ```Founder```\n*AI Packages:* ```Xteam / Eva / DeepAI / WhatsAsena / RTDA```\n*DeepAI Version:* ```1.0.17```\n*XTeam Verison:* ```4.4```" }
         )
