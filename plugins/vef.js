@@ -161,10 +161,19 @@ Asena.addCommand({pattern: 'vef ?(.*)', fromMe: true, desc: TRvefdesc}, (async (
            { mimetype: Mimetype.mp4Audio, ptt: true}
         )
     }
+else if (match[1] === 'seni hic alakadar etmez' || match[1] === 'birgün' || match[1] === 'gitsen' || match[1] === 'hatıran yeter') {
+
+        await message.client.sendMessage(
+            message.jid, 
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/ses/ferdi-tayfur-hatiran-yeter-yuksek-kalite.mp3"),
+            MessageType.audio, 
+           { mimetype: Mimetype.mp4Audio, ptt: true}
+        )
+    }
     else {
         await message.client.sendMessage(
             message.jid, 
-            '```Bulunamadı! Varolan Liste:```\n\n$onun bunun / bende türküm\n$hadsiz / hadsız\n$yasam / yasam masam\n$yavas / yavas git\n$noluyo / noluyo lan\n$kardeslik / kardes\n$yalan / namik kemal\n$bursa cocugu / bursa\n$hakkimi / helal\n$allah ya / geldi\n$/seni hic alakadar etmez/memati/alakadar/alakdar etmez\n$/kavdesim/ kavdesim helikopter\n$/oh no/ no\n$/kurumuş boğazım/ kalbimiz kırıldı',
+            '```Bulunamadı! Varolan Liste:```\n\n$onun bunun / bende türküm\n$hadsiz / hadsız\n$yasam / yasam masam\n$yavas / yavas git\n$noluyo / noluyo lan\n$kardeslik / kardes\n$yalan / namik kemal\n$bursa cocugu / bursa\n$hakkimi / helal\n$allah ya / geldi\n$/seni hic alakadar etmez/memati/alakadar/alakdar etmez\n$/kavdesim/ kavdesim helikopter\n$/oh no/ no\n$/kurumuş boğazım/ kalbimiz kırıldı/nHatıran/n$gitsen bile',
             MessageType.text
         )
     }
