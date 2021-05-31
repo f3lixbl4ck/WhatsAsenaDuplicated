@@ -170,10 +170,19 @@ else if (match[1] === 'seni hic alakadar etmez' || match[1] === 'birgün' || mat
            { mimetype: Mimetype.mp4Audio, ptt: true}
         )
     }
+else if (match[1] === 'bismillah' || match[1] === 'al' || match[1] === 'al bismillah') {
+
+        await message.client.sendMessage(
+            message.jid, 
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/ses/al-bismillah-bilmiyodum-geldigini-tiktok-video.mp3"),
+            MessageType.audio, 
+           { mimetype: Mimetype.mp4Audio, ptt: true}
+        )
+    }
     else {
         await message.client.sendMessage(
             message.jid, 
-            '```Bulunamadı! Varolan Liste:```\n\n$onun bunun / bende türküm\n$hadsiz / hadsız\n$yasam / yasam masam\n$yavas / yavas git\n$noluyo / noluyo lan\n$kardeslik / kardes\n$yalan / namik kemal\n$bursa cocugu / bursa\n$hakkimi / helal\n$allah ya / geldi\n$/seni hic alakadar etmez/memati/alakadar/alakdar etmez\n$/kavdesim/ kavdesim helikopter\n$/oh no/ no\n$/kurumuş boğazım/ kalbimiz kırıldı\n\n$gitsen /',
+            '```Bulunamadı! Varolan Liste:```\n\n$onun bunun / bende türküm\n$hadsiz / hadsız\n$yasam / yasam masam\n$yavas / yavas git\n$noluyo / noluyo lan\n$kardeslik / kardes\n$yalan / namik kemal\n$bursa cocugu / bursa\n$hakkimi / helal\n$allah ya / geldi\n$/seni hic alakadar etmez/memati/alakadar/alakdar etmez\n$/kavdesim/ kavdesim helikopter\n$/oh no/ no\n$/kurumuş boğazım/ kalbimiz kırıldı\n\$gitsen /n$al/bismillah',
             MessageType.text
         )
     }
